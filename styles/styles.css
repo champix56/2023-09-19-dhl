@@ -1,6 +1,7 @@
 body{
     height : 97vh;
-    width : 97vw;
+    width : 99vw;
+    padding-left: 0.6vw;
 }
 /* header */
 header{
@@ -20,6 +21,7 @@ header{
     display: flex;
     flex-direction: column;
     height: 100%;
+    width:100%;
 }
 /* article */
 article{
