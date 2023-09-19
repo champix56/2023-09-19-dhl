@@ -1,1 +1,1 @@
-confirm('coucou')
+alert('coucou')
