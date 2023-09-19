@@ -1,3 +1,13 @@
-body{
-   color:red; 
+/* header */
+header{
+    text-decoration: underline black;
+    font-size: 36pt;
+}
+#meme{
+    color:tomato;
+    font-weight: 900;
+}
+#js{
+    color: skyblue;
+    font-style: italic;
 }
