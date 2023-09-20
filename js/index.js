@@ -1,7 +1,18 @@
-function initJs(color) {
+//com ligne unique
+/*
+    com multilignes
+*/
+//exemple de doc
+/**
+ * fonction d'initialisation du js
+ * @param {string} color chaine de valeur de couleur css
+ * @param {CSSStyleDeclaration} nonUtilise chaine non utilisée pour la demo
+ * @returns {undefined} pas de retour
+ */
+function initJs(color, nonUtilise) {
   var jsLoadedNode = document.querySelector("#is-js-loaded");
   jsLoadedNode.innerHTML = "JS <b>OK</b>";
   jsLoadedNode.style.textAlign = "center";
   jsLoadedNode.style.color = color;
 }
-initJs("aquamarine", { a: 34, b: "eee" });
+initJs("aquamarine");
