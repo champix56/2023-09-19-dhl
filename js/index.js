@@ -11,9 +11,9 @@ function changePreHeader(color, nonUtilise) {
   jsLoadedNode.style.color = color;
 }
 /**
- * fonction principale d'initialisation des events 
+ * fonction principale d'initialisation des events
  * necessite le chargement complet et effectif du DOM
- * @param {string} color 
+ * @param {string} color
  * @returns {undefined} pas de retour
  */
 function initJs(color) {
@@ -22,6 +22,11 @@ function initJs(color) {
     .querySelector("#ne-pas-cliquez")
     .addEventListener("click", function (evt) {
       console.log(evt);
+      changePreHeader("blue");
     });
 }
-initJs("aquamarine");
+
+document.addEventListener('DOMContentLoaded',function (evt) {
+    initJs("aquamarine");
+})
+
