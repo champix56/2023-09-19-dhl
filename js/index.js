@@ -18,5 +18,10 @@ function changePreHeader(color, nonUtilise) {
 
 function initJs(color) {
   changePreHeader(color);
+  document
+    .querySelector("#ne-pas-cliquez")
+    .addEventListener("click", function (evt) {
+      console.log(evt);
+    });
 }
 initJs("aquamarine");
