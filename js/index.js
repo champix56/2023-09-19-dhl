@@ -9,10 +9,14 @@
  * @param {CSSStyleDeclaration} nonUtilise chaine non utilisée pour la demo
  * @returns {undefined} pas de retour
  */
-function initJs(color, nonUtilise) {
+function changePreHeader(color, nonUtilise) {
   var jsLoadedNode = document.querySelector("#is-js-loaded");
   jsLoadedNode.innerHTML = "JS <b>OK</b>";
   jsLoadedNode.style.textAlign = "center";
   jsLoadedNode.style.color = color;
+}
+
+function initJs(color) {
+  changePreHeader(color);
 }
 initJs("aquamarine");
