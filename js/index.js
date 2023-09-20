@@ -24,9 +24,26 @@ function initJs(color) {
       console.log(evt);
       changePreHeader("blue");
     });
+  /**
+   * fonction de gestion de soumission formulaire
+   * @param {SubmitEvent} evt event de soumission
+   */
+  function onformsubmit(evt) {
+    evt.preventDefault();
+    console.log(evt);
+    console.log('texte',evt.target['texte'].value);
+    console.log('texte',evt.target['x'].value);
+    console.log('texte',evt.target['y'].value);
+    console.log('texte',evt.target['color'].value);
+    console.log('texte',evt.target['fontSize'].value);
+    console.log('texte',evt.target['fontWeight'].value);
+    //debugger;
+
+  }
+
+  document.forms["meme_form"].addEventListener("submit", onformsubmit);
 }
 
-document.addEventListener('DOMContentLoaded',function (evt) {
-    initJs("aquamarine");
-})
-
+document.addEventListener("DOMContentLoaded", function (evt) {
+  initJs("aquamarine");
+});
