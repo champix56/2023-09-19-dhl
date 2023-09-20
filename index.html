@@ -70,7 +70,55 @@
               Vive js
             </text>
           </svg>
-          <div>droite</div>
+          <div>
+            <form action="/formulaireTraitement.php" name="meme_form" method="POST" >
+              <h2>Contenu Meme</h2>
+              <hr />
+
+              <label for="texte"><h3>texte</h3></label><br />
+              <input type="text" name="texte" id="texte" />
+              <div class="col">
+                <div>
+                  <label for="x"><h3>x</h3></label><br />
+                  <input type="number" name="x" id="x" min="0" />
+                </div>
+                <div>
+                  <label for="y"><h3>y</h3></label><br />
+                  <input type="number" name="y" id="y" min="0" />
+                </div>
+              </div>
+              <hr />
+              <hr />
+              <h2>Decoration Meme</h2>
+              <hr />
+              <label for="color"><h3>color</h3></label><br />
+              <input type="color" name="color" id="color" />
+              <br />
+              <div class="col">
+                <div>
+                  <label for="fontSize"><h3>fontSize</h3></label><br />
+                  <input type="number" name="fontSize" id="fontSize" min="1" />
+                </div>
+                <div>
+                  <label for="fontWeight"><h3>fontWeight</h3></label><br />
+                  <input
+                    type="number"
+                    name="fontWeight"
+                    id="fontWeight"
+                    min="100"
+                    max="900"
+                    step="100"
+                  />
+                </div>
+              </div>
+              <hr />
+              <hr />
+              <div class="col">
+                <div><input type="reset" value="Reset"></div>
+                <div><button type="submit">Submit</button></div>
+              </div>
+            </form>
+          </div>
         </div>
       </article>
       <button id="ne-pas-cliquez" type="button">Ne pas cliquez ici</button>

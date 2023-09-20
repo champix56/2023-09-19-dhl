@@ -1,46 +1,62 @@
-body{
-    height : 97vh;
-    width : 99vw;
-    padding-left: 0.6vw;
+body {
+  height: 97vh;
+  width: 99vw;
+  padding-left: 0.6vw;
 }
 /* header */
-header{
-    text-decoration: underline black;
-    font-size: 36pt;
+header {
+  text-decoration: underline black;
+  font-size: 36pt;
 }
-#meme{
-    color:tomato;
-    font-weight: 900;
+#meme {
+  color: tomato;
+  font-weight: 900;
 }
-#js{
-    color: skyblue;
-    font-style: italic;
+#js {
+  color: skyblue;
+  font-style: italic;
 }
 /* #main */
-#main{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width:100%;
+#main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 /* article */
-article{
-    flex-grow: 1;
+article {
+  flex-grow: 1;
 }
 /* #meme-viewer */
-#meme-viewer{
-    display: flex;
-    height: 100%;
+#meme-viewer {
+  display: flex;
+  height: 100%;
+}
+#meme-viewer > * {
+  height: 100%;
+}
+#meme-viewer > *:first-child {
+  flex-grow: 1;
+}
+#meme-viewer > div {
+  padding: 10px 5px;
+  overflow-y: scroll;
+  text-align: center;
+  min-width: 300px;
+}
+#meme-viewer .col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.col > div {
+  width: 48%;
+}
+.col input,.col button {
+  width: 90%;
 }
 
-#meme-viewer > *{
-    height : 100%;
-}
-#meme-viewer > *:first-child
-{
-    flex-grow:1;
-}
 /* footer */
-footer{
-    text-align: center;
+footer {
+  text-align: center;
 }
