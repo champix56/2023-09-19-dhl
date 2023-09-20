@@ -1,8 +1,3 @@
-//com ligne unique
-/*
-    com multilignes
-*/
-//exemple de doc
 /**
  * fonction d'initialisation du js
  * @param {string} color chaine de valeur de couleur css
@@ -15,7 +10,12 @@ function changePreHeader(color, nonUtilise) {
   jsLoadedNode.style.textAlign = "center";
   jsLoadedNode.style.color = color;
 }
-
+/**
+ * fonction principal d'initialisation des events 
+ * necessite le chargement complet et effectif du DOM
+ * @param {string} color 
+ * @returns {undefined} pas de retour
+ */
 function initJs(color) {
   changePreHeader(color);
   document
