@@ -1,5 +1,5 @@
 /**
- * fonction d'initialisation du js
+ * fonction d'initialisation du bandeau js
  * @param {string} color chaine de valeur de couleur css
  * @param {CSSStyleDeclaration} nonUtilise chaine non utilisée pour la demo
  * @returns {undefined} pas de retour
@@ -11,7 +11,7 @@ function changePreHeader(color, nonUtilise) {
   jsLoadedNode.style.color = color;
 }
 /**
- * fonction principal d'initialisation des events 
+ * fonction principale d'initialisation des events 
  * necessite le chargement complet et effectif du DOM
  * @param {string} color 
  * @returns {undefined} pas de retour
