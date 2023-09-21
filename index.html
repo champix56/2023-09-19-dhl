@@ -10,9 +10,8 @@
     />
     <link rel="stylesheet" href="/styles/styles.css" />
     <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="/js/Image.js"></script>
-    <script src="/js/Meme.js"></script>
-    <script src="/js/index.js"></script>
+
+    <script src="/js/index.js" type="module"></script>
   </head>
 
   <body>
@@ -73,10 +72,18 @@
             </text>
           </svg>
           <div>
-            <form action="/formulaireTraitement.php" name="meme_form" method="POST" >
+            <form
+              action="/formulaireTraitement.php"
+              name="meme_form"
+              method="POST"
+            >
               <h2>Contenu Meme</h2>
               <hr />
-
+              <label for="image"><h3>image</h3></label><br />
+              <select name="image" id="image">
+                <option value="-1">no images</option>
+              </select>
+              <hr />
               <label for="texte"><h3>texte</h3></label><br />
               <input type="text" name="texte" id="texte" />
               <div class="col">
@@ -116,7 +123,7 @@
               <hr />
               <hr />
               <div class="col">
-                <div><input type="reset" value="Reset"></div>
+                <div><input type="reset" value="Reset" /></div>
                 <div><button type="submit">Submit</button></div>
               </div>
             </form>

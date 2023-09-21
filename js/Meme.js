@@ -1,8 +1,9 @@
+import {ImageMeme as Img} from './Image.js'
 /**
  * construction d'instance meme avec ou sans json de base
  * @param {string} jsonConfiguredMemeStr
  */
-function Meme(jsonConfiguredMemeStr) {
+export function Meme(jsonConfiguredMemeStr) {
   this.texte = "";
   this.x = 0;
   this.y = 32;
@@ -12,6 +13,7 @@ function Meme(jsonConfiguredMemeStr) {
   this.underline = false;
   this.italic = false;
   this.imageId = -1;
+  this.image=new Img();
   /**
    * chargement de valeurs a partir d'un meme en json
    * @param {string} jsonStr

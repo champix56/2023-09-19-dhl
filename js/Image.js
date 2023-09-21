@@ -1,5 +1,6 @@
+import RestAdr, {REST_RESSOURCES} from './constantes.js'
 /**
- * 
+ *
  */
 class ImageShort {
   #uid;
@@ -10,10 +11,10 @@ class ImageShort {
   h;
   url;
   /**
-   * 
-   * @param {object?}} img 
+   *
+   * @param {object?}} img
    */
-  constructor(img={}) {    
+  constructor(img = {}) {
     //if (undefined === img) img = {};
     this.#uid = Math.random();
 
@@ -46,16 +47,16 @@ class ImageShort {
    * get ration of image
    * @returns {number} ratio between W and H
    */
-  getRatioWH(){
-    return this.w/this.h;
+  getRatioWH() {
+    return this.w / this.h;
   }
 }
-class ImageMeme extends ImageShort {
+export class ImageMeme extends ImageShort {
   title = "no image";
   id = undefined;
-  constructor(img={}) {
+  constructor(img = {}) {
     super(img);
-  //  if (undefined === img) img = {};
+    //  if (undefined === img) img = {};
     if (undefined !== img.title && img.title.length > 2) {
       this.title = img.title;
     } else if (
@@ -73,3 +74,27 @@ class ImageMeme extends ImageShort {
     }
   }
 }
+
+export class ImagesList extends Array {
+  loadFromRest() {
+    return ( 
+        fetch(`${RestAdr}${REST_RESSOURCES.images}`)
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        })
+        .then((arr) => {
+            console.log(arr, this);
+            this.splice(0);
+            /*arr.map((element,position,liste)=>{
+                //console.log(element,position,liste);
+                this.push(element);
+            });*/
+            this.push(...arr);
+            console.log(this);
+            return this;
+        })
+    )
+  }
+}
+export const listeImages = new ImagesList();
