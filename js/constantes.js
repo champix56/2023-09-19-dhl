@@ -4,4 +4,5 @@ export const REST_RESSOURCES=Object.freeze({
     memes:'/memes',
     images:'/images'
 })
-export default `${REST_ADR}:${REST_PORT}`;
+const REST_ADR_FULL= `${REST_ADR}:${REST_PORT}`
+export default REST_ADR_FULL;

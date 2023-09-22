@@ -201,6 +201,54 @@
       "frameSizeX": 0,
       "frameSizeY": 0,
       "id": 10
+    },
+    {
+      "texte": "o*O¨pùµ%Ioj!ùmuo",
+      "x": 13,
+      "y": 45,
+      "color": "#772727",
+      "fontWeight": "900",
+      "fontSize": 64,
+      "underline": true,
+      "italic": true,
+      "imageId": -1,
+      "id": 11
+    },
+    {
+      "texte": "",
+      "x": 0,
+      "y": 32,
+      "color": "#000000",
+      "fontWeight": "500",
+      "fontSize": 32,
+      "underline": true,
+      "italic": true,
+      "imageId": -1,
+      "id": 12
+    },
+    {
+      "texte": "",
+      "x": 0,
+      "y": 32,
+      "color": "#000000",
+      "fontWeight": "500",
+      "fontSize": 32,
+      "underline": true,
+      "italic": true,
+      "imageId": -1,
+      "id": 13
+    },
+    {
+      "texte": "",
+      "x": 0,
+      "y": 32,
+      "color": "#000000",
+      "fontWeight": "500",
+      "fontSize": 32,
+      "underline": true,
+      "italic": true,
+      "imageId": -1,
+      "id": 14
     }
   ]
 }
