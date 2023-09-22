@@ -1,5 +1,6 @@
 import { Meme } from "./Meme.js";
 import { ImagesList, listeImages } from "./Image.js";
+import modal from "./MessageBox.js";
 /**
  *
  * @param {Meme} meme
@@ -27,13 +28,22 @@ const addFormEvents = () => {
    */
   function onformsubmit(evt) {
     evt.preventDefault();
-    const promiseSave = current.save();
-    promiseSave.then((obj) => {
-      current = new Meme();
-      current.render = renderMeme;
-      fillFormDatas(current);
-      renderMeme(current);
-    });
+    modal.show(
+      "Etes vous sure ?",
+      " enregistrer le meme ?",
+      () => {
+        const promiseSave = current.save();
+        promiseSave.then((obj) => {
+          current = new Meme();
+          current.render = renderMeme;
+          fillFormDatas(current);
+          renderMeme(current);
+        });
+      },
+      () => {
+        console.log("enregistrement annulé");
+      }
+    );
 
     console.log(current);
     //current.save();
@@ -175,4 +185,5 @@ document.addEventListener("DOMContentLoaded", function (evt) {
     loadSelectImages(r);
   });
   initJs("aquamarine");
+  //modal.show('<h1>Titre en forme avec html</h1>','<h3>bienvenu</h3>comment allez vous ? la formation est elle bien ?',()=>{},()=>{});
 });
