@@ -41,7 +41,11 @@ const addFormEvents = () => {
         });
       },
       () => {
-        console.log("enregistrement annulé");
+        console.log(
+          "%c%s",
+          "color:red;font-size:42pt; text-decoration:underline;",
+          "enregistrement annulé"
+        );
       }
     );
 
